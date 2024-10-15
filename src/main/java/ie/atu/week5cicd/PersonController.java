@@ -11,12 +11,12 @@ import java.util.List;
 @RequestMapping("/person")
 public class PersonController {
     List<Person>personList=new ArrayList<>();
-    @GetMapping
+    @GetMapping("/getPerson")
     public List<Person> getPerson()
     {
         return personList;
     }
-    @PostMapping
+    @PostMapping("/createPerson")
     public List<Person> addPerson(@Valid @RequestBody Person person)
     {
         personList.add(person);
